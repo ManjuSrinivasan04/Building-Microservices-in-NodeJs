@@ -8,6 +8,9 @@ const app = express();
 
 app.use(bodyParser.json());
 
+//Because the code implements inter-services communication, it needs to know the address of the heroes service
+//If changed the port on which the heroes service runs then need to edit this line
+
 const heroesService = 'http://localhost:4000';
 
 //the challenges that only a superhero can overcome. It also provides an API endpoint for matching superheros to threats.

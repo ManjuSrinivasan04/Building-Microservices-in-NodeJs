@@ -6,6 +6,7 @@ const port = 4000;
 const app = express();
 app.use(bodyParser.json());
 
+// a list of heroes super powers
 const powers = [
    { id: 1, name: 'flying' },
    { id: 2, name: 'teleporting' },
@@ -14,6 +15,7 @@ const powers = [
    { id: 5, name: 'mind reading' }
 ];
 
+//a list of heroes
 const heroes = [
    {
        id: 1,
@@ -48,6 +50,8 @@ const heroes = [
        busy: false
    }
 ];
+
+//API endpoints to get the list of heroes, update a hero’s profile, and get a hero’s picture
 
 app.get('/heroes', (req, res) => {
    console.log('Returning heroes list');
